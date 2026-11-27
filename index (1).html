@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopNest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#home" class="logo">Shop<span>Nest</span></a>
+    <nav class="nav">
+      <a href="#home" data-link="home">Home</a>
+      <a href="#products" data-link="products">Products</a>
+      <a href="#wishlist" data-link="wishlist">Wishlist <b id="wishCount" class="badge">0</b></a>
+      <a href="#cart" data-link="cart">Cart <b id="cartCount" class="badge">0</b></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home page -->
+    <section id="home" class="page">
+      <div class="hero">
+        <h1>Everyday things, made better</h1>
+        <p>Discover gadgets, fashion and home essentials at friendly prices.</p>
+        <a href="#products" class="btn">Shop now</a>
+      </div>
+      <h2>Featured products</h2>
+      <div id="featured" class="grid"></div>
+    </section>
+
+    <!-- Product page -->
+    <section id="products" class="page">
+      <h2>All products</h2>
+      <div class="filters">
+        <input type="search" id="search" placeholder="Search products..." aria-label="Search products">
+        <select id="category" aria-label="Category">
+          <option value="all">All categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Home">Home</option>
+        </select>
+        <select id="sort" aria-label="Sort by">
+          <option value="default">Sort: Default</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+      <div id="productList" class="grid"></div>
+    </section>
+
+    <!-- Cart page -->
+    <section id="cart" class="page">
+      <h2>Your cart</h2>
+      <div id="cartItems"></div>
+    </section>
+
+    <!-- Wishlist page -->
+    <section id="wishlist" class="page">
+      <h2>Your wishlist</h2>
+      <div id="wishlistItems" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 ShopNest. All rights reserved.</footer>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
